@@ -49,7 +49,7 @@ app.use(function (err, req, res, next) {
 	res.render("error");
 });
 mongoose
-	.connect("mongodb+srv://awais:12345@myfirstcluster.onjy7.mongodb.net/projectgym?retryWrites=true&w=majority", {
+	.connect("mongodb+srv://awais:12345@myfirstcluster.onjy7.mongodb.net/projectgyms?retryWrites=true&w=majority", {
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
 	})

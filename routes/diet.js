@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 var checkSessionAuth = require("../middlewares/checkSessionAuth");
-var Diet = require("../models/diet");
+var {Diet,validate} = require("../models/diet");
 
 /* GET users listing. */
 router.get("/", async function (req, res, next) {
@@ -18,6 +18,8 @@ router.get("/add", checkSessionAuth, async function (req, res, next) {
 });
 
 router.post("/add", async function (req, res, next) {
+	const { error } = validate(req.body);
+	if (error) return res.status(400).send(error.details[0].message);
 	let diet = new Diet(req.body);
 	await diet.save();
 	res.redirect("/diet");

@@ -18,4 +18,14 @@ const dietSchema = new mongoose.Schema({
 
 const Diet = mongoose.model("Diet", dietSchema);
 
-module.exports = Diet;
+function validateDiet(data) {
+	const schema = Joi.object({
+	  type: Joi.string().min(3).max(20).required(),
+	  description: Joi.string().min(10).max(400).required(),
+
+	});
+	return schema.validate(data, { abortEarly: false });
+  }
+  module.exports.Diet = Diet;
+  module.exports.validate = validateDiet;
+

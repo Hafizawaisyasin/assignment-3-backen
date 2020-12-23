@@ -22,11 +22,11 @@ block content
           tr
             td(style="text-align:center")=item.name
             td(style="text-align:center")=item.price
-            td(style="text-align:center")=item.weight
+            td(style="text-align:center")=`${item.weight} g`
             td(style="text-align:center")
               a(href="/products/cart/remove/"+item._id, class="btn btn-danger") Remove Item
       tfoot
         tr
           td(style="text-align:center") Total
           td(style="text-align:center")=total
-          td(style="text-align:center")=totals
+          td(style="text-align:center")=`${totals} gram `

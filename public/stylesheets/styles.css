@@ -10,33 +10,33 @@ li {
 	border: 2px dotted #eee;
 	color: #fff;
 }
-
+.nav-item {
+	background-color: aqua;
+}
 li:hover {
 	background-color: rgb(138, 125, 125);
 }
 li:active {
 	background-color: rgb(37, 34, 34);
 }
-.add{	
+.add {
 	background-color: rgb(27, 39, 14);
 }
 
-.container{
-	margin-top: 10px!important;
-	
-	padding-top: 10px!important;
+.container {
+	margin-top: 10px !important;
+
+	padding-top: 10px !important;
 }
-.styling{
+.styling {
 	margin-top: 150px;
 	padding-top: 20px;
 	padding-bottom: 50px;
-	
 
 	background-color: rgb(145, 89, 89);
 	text-align: center;
 	justify-content: centre;
 	margin-left: auto;
-    margin-right: auto;
-	width: 8em
-	
+	margin-right: auto;
+	width: 8em;
 }

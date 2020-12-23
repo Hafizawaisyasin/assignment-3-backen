@@ -11,7 +11,7 @@ var dietRouter = require("./routes/diet");
 var calculatorRoute = require("./routes/calculator");
 var productRouter = require("./routes/products");
 var session = require("express-session");
-var sessionAuth = require("./middlewares/sessionAuth");
+var sessionAuth = require("./middlewares/sessionAuth"); 
 
 var app = express();
 
